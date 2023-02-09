@@ -1,11 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { Provider } from "react-redux";
+import { store } from "./store";
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  //making  store for single source of truth and wrapping app component
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
